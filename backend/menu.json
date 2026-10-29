@@ -1,0 +1,126 @@
+{
+  "restaurant_name": "EMPIRE RESTAURANT",
+  "cuisine": "Indian Multi-Cuisine",
+  "menu": [
+    {
+      "id": "item_1",
+      "name": "Paneer Tikka Skewers",
+      "price": 280,
+      "category": "Starters",
+      "description": "Cottage cheese cubes marinated in spiced yogurt and grilled in a clay oven.",
+      "ingredients": ["paneer", "yogurt", "bell peppers", "spices"],
+      "allergens": ["dairy"],
+      "is_veg": true,
+      "spice_level": 2,
+      "is_available": true
+    },
+    {
+      "id": "item_2",
+      "name": "Chicken Malai Tikka",
+      "price": 340,
+      "category": "Starters",
+      "description": "Succulent chicken pieces marinated in cream, cheese, and mild spices.",
+      "ingredients": ["chicken", "cream", "cheese", "cashew paste"],
+      "allergens": ["dairy", "nuts"],
+      "is_veg": false,
+      "spice_level": 1,
+      "is_available": true
+    },
+    {
+      "id": "item_3",
+      "name": "Crispy Corn Salt & Pepper",
+      "price": 240,
+      "category": "Starters",
+      "description": "Golden fried corn kernels tossed with crushed black pepper, onions, and chillies.",
+      "ingredients": ["sweet corn", "corn flour", "bell peppers", "spring onions"],
+      "allergens": [],
+      "is_veg": true,
+      "spice_level": 1,
+      "is_available": true
+    },
+    {
+      "id": "item_4",
+      "name": "Butter Chicken",
+      "price": 420,
+      "category": "Main Course",
+      "description": "Tender chicken cooked in a rich, velvety tomato and butter gravy.",
+      "ingredients": ["chicken", "tomatoes", "butter", "cream", "cashews"],
+      "allergens": ["dairy", "nuts"],
+      "is_veg": false,
+      "spice_level": 1,
+      "is_available": true
+    },
+    {
+      "id": "item_5",
+      "name": "Dal Makhani",
+      "price": 310,
+      "category": "Main Course",
+      "description": "Whole black lentils simmered overnight with butter and heavy cream.",
+      "ingredients": ["black lentils", "kidney beans", "butter", "cream"],
+      "allergens": ["dairy"],
+      "is_veg": true,
+      "spice_level": 1,
+      "is_available": true
+    },
+    {
+      "id": "item_6",
+      "name": "Hyderabadi Dum Biryani (Chicken)",
+      "price": 380,
+      "category": "Main Course",
+      "description": "Aromatic basmati rice and tender chicken cooked on slow fire with traditional spices.",
+      "ingredients": ["basmati rice", "chicken", "yogurt", "saffron", "spices"],
+      "allergens": ["dairy"],
+      "is_veg": false,
+      "spice_level": 2,
+      "is_available": true
+    },
+    {
+      "id": "item_7",
+      "name": "Butter Naan",
+      "price": 60,
+      "category": "Breads",
+      "description": "Soft leavened flatbread baked in a tandoor and brushed with butter.",
+      "ingredients": ["refined flour", "yeast", "butter", "milk"],
+      "allergens": ["gluten", "dairy"],
+      "is_veg": true,
+      "spice_level": 0,
+      "is_available": true
+    },
+    {
+      "id": "item_8",
+      "name": "Garlic Naan",
+      "price": 80,
+      "category": "Breads",
+      "description": "Tandoor-baked flatbread topped with fresh minced garlic and cilantro.",
+      "ingredients": ["refined flour", "garlic", "butter", "cilantro"],
+      "allergens": ["gluten", "dairy"],
+      "is_veg": true,
+      "spice_level": 0,
+      "is_available": true
+    },
+    {
+      "id": "item_9",
+      "name": "Classic Lemon Mint Mojito",
+      "price": 180,
+      "category": "Beverages",
+      "description": "Refreshing mocktail with fresh mint leaves, lime juice, and club soda.",
+      "ingredients": ["mint", "lime", "sugar", "soda"],
+      "allergens": [],
+      "is_veg": true,
+      "spice_level": 0,
+      "is_available": true
+    },
+    {
+      "id": "item_10",
+      "name": "Gulab Jamun with Ice Cream",
+      "price": 200,
+      "category": "Desserts",
+      "description": "Deep-fried milk solid dumplings soaked in rose-flavored sugar syrup, served warm with vanilla ice cream.",
+      "ingredients": ["khoya", "milk", "sugar", "rose water", "vanilla ice cream"],
+      "allergens": ["dairy", "gluten"],
+      "is_veg": true,
+      "spice_level": 0,
+      "is_available": true
+    }
+  ]
+}
