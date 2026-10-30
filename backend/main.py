@@ -1,5 +1,6 @@
 import uuid
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 from sqlalchemy.orm import Session
@@ -185,3 +186,40 @@ def chat_with_ai(chat: ChatRequest, db: Session = Depends(get_db)):
         reply = f"I'm your AI waiter at Empire Restaurant! I heard: '{chat.message}'. How can I help you explore the menu today?"
         
     return {"reply": reply}
+
+# --- 6. ADD THIS CORS MIDDLEWARE BLOCK ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows your Next.js frontend to connect
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# --- 7. Get All Orders Endpoint (For Kitchen Display) ---
+@app.get("/orders")
+def get_orders(db: Session = Depends(get_db)):
+    orders = db.query(OrderModel).all()
+    order_list = []
+    for order in orders:
+        # Get items for this order
+        items = db.query(OrderItemModel).filter(OrderItemModel.order_id == order.order_id).all()
+        item_details = []
+        for i in items:
+            menu_item = db.query(MenuItemModel).filter(MenuItemModel.id == i.item_id).first()
+            item_details.append({
+                "item_id": i.item_id,
+                "name": menu_item.name if menu_item else "Unknown",
+                "quantity": i.quantity,
+                "price": i.price
+            })
+            
+        order_list.append({
+            "order_id": order.order_id,
+            "session_id": order.session_id,
+            "table_number": order.table_number,
+            "total_amount": order.total_amount,
+            "status": order.status,
+            "items": item_details
+        })
+    return {"orders": order_list}
