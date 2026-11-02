@@ -2,7 +2,7 @@ import qrcode
 import os
 
 # If testing locally, use localhost:3000. When deployed online (e.g., Vercel), replace with your public domain!
-BASE_URL = "http://localhost:3000/r/empire-restaurant/t"
+BASE_URL = "http://10.243.98.129:3000/r/empire-restaurant/t"
 
 # Create a folder to store the generated QR codes
 output_dir = "qr_codes"
